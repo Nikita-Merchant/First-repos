@@ -1,7 +1,7 @@
 def introspection_info(obj):
     glossia_obj = {}
     attributes, methods = [], []
-    glossia_obj['type'] = str(type(obj))[8:-2] # Определяем тип объекта.
+    glossia_obj['type'] = obj.__class__.__name__ # Определяем тип объекта.
     for attribute in dir(obj): # Проходим по списку атрибутов и методов, фильтруя их с помощью callable
                                # (определяем свойство вызываемости, присущее функциям / методам объекта).
         if callable(getattr(obj, attribute)):
