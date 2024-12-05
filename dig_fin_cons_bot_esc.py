@@ -5,7 +5,7 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 # Сохраняем токен бота, без него магия управления ботом не случиться. Токен можно получить в Фазер-Боте.
-api = '7538949947:AAF5z4IL9hFtpNoNafC-RHhQAZcXhX2BJGE'
+api = 'Имя токена'
 # Создаем сущность нашего бота.
 bot = Bot(token=api)
 # Создаем сущность Диспетчера, через которого будем управлять ботом.
