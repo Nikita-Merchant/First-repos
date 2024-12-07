@@ -10,6 +10,10 @@ disp = Dispatcher(bot, storage=MemoryStorage())
 class UserState(StatesGroup):
     age, growth, weight = State(), State(), State()
 
+@disp.message_handler(commands=['start'])
+async def start(message):
+    await message.answer('Привет! Я бот помогающий твоему здоровью.')
+
 @disp.message_handler(text = 'Calories')
 async def set_age(message):
     await message.answer('Введите свой возраст:')
