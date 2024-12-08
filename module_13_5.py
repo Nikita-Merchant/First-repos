@@ -14,8 +14,7 @@ disp = Dispatcher(bot, storage=MemoryStorage())
 kl = ReplyKeyboardMarkup(resize_keyboard=True)
 button_1 = KeyboardButton(text = 'Рассчитать')
 button_2 = KeyboardButton(text = 'Информация')
-kl.add(button_1)
-kl.add(button_2)
+kl.row(button_1, button_2)  # Добавляем обе кнопки в одну строку
 
 # Обновляем блок основной функциональности бота из предыдущего модуля
 class UserState(StatesGroup):
