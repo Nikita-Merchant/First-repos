@@ -18,7 +18,7 @@ kl = ReplyKeyboardMarkup(resize_keyboard=True)
 button_1 = KeyboardButton(text = 'Описание проекта')
 button_2 = KeyboardButton(text = 'Дополнительные материалы')
 button_3 = KeyboardButton(text = 'Контакты проекта')
-kl.row(button_1, button_2, button_3)  # Добавляем обе кнопки в одну строку
+kl.row(button_1, button_2, button_3)  # Добавляем кнопки в одну строку
 
 # Прописываем команду старта, закидываем ее в диспетчера, используя декоратор Месседж-хэндлер.
 @disp.message_handler(commands=['start'])
